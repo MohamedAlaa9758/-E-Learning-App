@@ -1,0 +1,36 @@
+  @import "tailwindcss";
+
+  @theme {
+    --breakpoint-2xl: 1400px;
+    --color-blue-light: var(--blue-light);
+    --color-blue-dark: var(--blue-dark);
+    --color-color-btn1: var(--color-btn1);
+    --color-color-btn2: var(--color-btn2);
+    --color-danger: var(--danger);
+    --color-orange: var(--orange);
+    --color-bg-primary: var(--bg-primary);
+    --color-text-primary: var(--text-primary);
+  }
+  @layer base {
+    :root {
+      /* User Color Palette */
+      --black: #0a0a0a;
+      --white: #ffffff;
+      --blue-light: #ebf5ff;
+      --blue-dark: #252641;
+      --color-btn1: #49bbbd;
+      --color-btn2: #29b9e7;
+      --danger: #fad0ce;
+      --orange: #fcddb4;
+
+      /* Light Mode Mapping */
+      --bg-primary: var(--white);
+      --text-primary: var(--black);
+    }
+
+    .dark {
+      /* Dark Mode Mapping */
+      --bg-primary: var(--black);
+      --text-primary: var(--white);
+    }
+  }

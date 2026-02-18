@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "theme.css";
+
+@utility container {
+  margin-inline: auto;
+}
+@utility btn {
+  @apply bg-[#49BBBD] cursor-pointer py-3 px-5 my-4 text-white text-xs rounded-xl;
+}
