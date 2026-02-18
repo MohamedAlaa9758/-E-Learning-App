@@ -1,4 +1,4 @@
-export default function CardComponent({ srcImg, altImg, cardTitle, cardDes, userImg }) {
+export default function CardComponent({ srcImg, altImg, cardTitle, cardDes, userImg, userName, priceAfter, priceBefor }) {
   return (
     <>
       <div className="card bg-bg-primary shadow-2xl rounded-2xl py-4 px-3">
@@ -40,7 +40,7 @@ export default function CardComponent({ srcImg, altImg, cardTitle, cardDes, user
           </div>
         </div>
         <div className="card-body">
-          <p className="text-text-primary">{cardTitle}</p>
+          <p className="text-text-primary py-2">{cardTitle}</p>
         </div>
         <p className="text-gray-400">{cardDes}</p>
         <div className="flex justify-between items-center">
@@ -48,10 +48,10 @@ export default function CardComponent({ srcImg, altImg, cardTitle, cardDes, user
             <div className=" size-10 rounded-full overflow-hidden ">
               <img src={userImg} className="rounded-full" alt="" />
             </div>
-            <h3 className="text-text-primary">Lina</h3>
+            <h3 className="text-text-primary ">{userName}</h3>
           </div>
           <p className="text-color-btn1 font-bold ">
-            <span className="text-gray-400 line-through font-light">$100</span> $80
+            <span className="text-gray-400 line-through font-light">{priceBefor}</span> {priceAfter}
           </p>
         </div>
       </div>

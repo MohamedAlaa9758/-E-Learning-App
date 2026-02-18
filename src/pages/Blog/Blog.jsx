@@ -10,7 +10,44 @@ import market4 from "../../assets/market4.png";
 import ButtonComponent from "../../components/shared/Button/ButtonCompoent";
 import CardComponent from "../../components/shared/CardComponent";
 
-const cardData = [{}];
+const cardData = [
+  {
+    srcImg: market1,
+    cardTitle: "AWS Certified solutions Architect",
+    cardDes: "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
+    userImg: userImg,
+    userName: "lina",
+    priceBefor: "$100",
+    priceAfter: "$80",
+  },
+  {
+    srcImg: imgBlog1,
+    cardTitle: "AWS Certified solutions Architect",
+    cardDes: "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
+    userImg: userImg,
+    userName: "lina",
+    priceBefor: "$100",
+    priceAfter: "$80",
+  },
+  {
+    srcImg: haedImag,
+    cardTitle: "AWS Certified solutions Architect",
+    cardDes: "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
+    userImg: userImg,
+    userName: "lina",
+    priceBefor: "$100",
+    priceAfter: "$80",
+  },
+  {
+    srcImg: market4,
+    cardTitle: "AWS Certified solutions Architect",
+    cardDes: "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
+    userImg: userImg,
+    userName: "lina",
+    priceBefor: "$100",
+    priceAfter: "$80",
+  },
+];
 
 export default function Blog() {
   return (
@@ -209,7 +246,23 @@ export default function Blog() {
               </a>
             </div>
             <div className="flex flex-wrap">
-              <div className="lg:w-1/4 md:w-1/2 w-full">
+              {cardData.map((item, index) => (
+                <div key={index} className="lg:w-1/4 md:w-1/2 w-full">
+                  <div className="inner m-5">
+                    <CardComponent
+                      srcImg={item.srcImg}
+                      cardTitle={item.cardTitle}
+                      cardDes={item.cardDes}
+                      altImg={item.cardTitle}
+                      userImg={item.userImg}
+                      userName={item.userName}
+                      priceBefor={item.priceBefor}
+                      priceAfter={item.priceAfter}
+                    />
+                  </div>
+                </div>
+              ))}
+              {/* <div className="lg:w-1/4 md:w-1/2 w-full">
                 <div className="inner m-5">
                   <CardComponent
                     srcImg={market1}
@@ -248,7 +301,7 @@ export default function Blog() {
                     userImg={userImg}
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
